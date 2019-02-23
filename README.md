@@ -36,4 +36,4 @@ npm install
 
 2. 也可以根据docs文件夹下的文档一步步学习并创建
 
-[webpack4快速入门教程.md](./docs/webpack4快速入门教程)<br/>
+[webpack4快速入门教程.md](./docs/webpack)<br/>
