@@ -8,3 +8,5 @@ import '../css/test.css'
 document.write("entry.js is work <br/>");
 document.write(cube(2) + '<br/>');
 document.write(JSON.stringify(data) + '<br/>')
+let str = 'string'
+console.log('🚀🚀🚀wimi======>>>str',`${str}`)
