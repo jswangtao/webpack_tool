@@ -1,4 +1,5 @@
 const path = require('path') //node内置的模块，用来设置路径。
+const webpack = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin') //自动生成html文件的插件
 const CleanWebpackPlugin = require('clean-webpack-plugin') //清除之前打包的文件
@@ -37,6 +38,11 @@ module.exports = {
       template: './index.html',
     }),
     new CleanWebpackPlugin(['dist']),
+    new webpack.DefinePlugin({   //定义全局常量
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
   ],
   devServer: {
     contentBase: './dist', //默认服务于根目录下的index.html(可修改路径), 热加载是给开发人员使用的，它会开启服务器，将本地资源打包，监控到服务器中，给本地打包资源无关
