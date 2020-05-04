@@ -13,6 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), //输出文件路径配置
   },
   mode: 'development',
+  devtool: 'source-map',
   module: {
     rules: [
       {
