@@ -42,6 +42,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html', //以指定的模版生成指定名字的html
       template: './index.html',
+      inject: true,
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: false,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: false,
+      },
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.DefinePlugin({
