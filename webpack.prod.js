@@ -21,7 +21,20 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                require('autoprefixer')({
+                  browsers: ['last 2 version', '>1%', 'ios 7'],
+                }),
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -30,7 +43,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: '[name]_[hash:8].[ext]' //配置文件指纹hash
+              name: '[name]_[hash:8].[ext]', //配置文件指纹hash
             },
           },
         ],
