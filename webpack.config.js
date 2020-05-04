@@ -15,6 +15,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: 'babel-loader', //部分ES6的语法不能编译，比如import
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
@@ -38,7 +42,8 @@ module.exports = {
       template: './index.html',
     }),
     new CleanWebpackPlugin(['dist']),
-    new webpack.DefinePlugin({   //定义全局常量
+    new webpack.DefinePlugin({
+      //定义全局常量
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
       },

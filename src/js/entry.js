@@ -8,5 +8,9 @@ import '../css/test.css'
 document.write("entry.js is work <br/>");
 document.write(cube(2) + '<br/>');
 document.write(JSON.stringify(data) + '<br/>')
-let str = 'string'
-console.log('🚀🚀🚀wimi======>>>str',`${str}`)
+
+import Search from './search';
+import ReactDOM from 'react-dom';
+import React from 'react';
+
+ReactDOM.render(<Search/>,document.getElementById('root'))
