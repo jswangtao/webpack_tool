@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/js/entry.js',
   //出口
   output: {
-    filename: 'bundle.js', // 输出文件名
+    filename: '[name]_[chunkhash:8].js', // 输出文件名，配置文件指纹chunkhash
     path: path.resolve(__dirname, 'dist'), //输出文件路径配置
   },
   mode: 'production',
@@ -30,6 +30,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
+              name: '[name]_[hash:8].[ext]' //配置文件指纹hash
             },
           },
         ],

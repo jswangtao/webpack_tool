@@ -46,7 +46,7 @@ module.exports = {
     new webpack.DefinePlugin({
       //定义全局常量
       'process.env': {
-        NODE_ENV: JSON.stringify('production'),
+        NODE_ENV: JSON.stringify('development'),
       },
     }),
   ],
