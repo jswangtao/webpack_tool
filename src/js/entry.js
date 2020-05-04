@@ -9,6 +9,9 @@ document.write("entry.js is work <br/>");
 document.write(cube(2) + '<br/>');
 document.write(JSON.stringify(data) + '<br/>')
 
+import {a} from './tree-shaking';
+console.log('🚀🚀🚀wimi======>>>tree',a)
+
 import Search from './search';
 import ReactDOM from 'react-dom';
 import React from 'react';

@@ -31,10 +31,10 @@ module.exports = {
                 require('autoprefixer')({
                   browsers: ['last 2 version', '>1%', 'ios 7'],
                 }),
-              ]
-            }
-          }
-        ]
+              ],
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -73,4 +73,16 @@ module.exports = {
       },
     }),
   ],
+  // optimization: {
+  //   splitChunks: {
+  //     minSize: 0,
+  //     cacheGroups: {
+  //       commons: {
+  //         name: 'commons',
+  //         chunks: 'all',
+  //         minChunks: 2,
+  //       },
+  //     },
+  //   },
+  // },
 }
