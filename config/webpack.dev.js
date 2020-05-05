@@ -35,7 +35,7 @@ const devConfig = {
     devServer: {
         contentBase: '../public', // 默认服务于根目录下的index.html(可修改路径), 热加载是给开发人员使用的，它会开启服务器，将本地资源打包，监控到服务器中，给本地打包资源无关
         open: true, // 自动打开浏览器
-        port: 4000,
+        port: 8888,
         host: '0.0.0.0',
         quiet: true, // 优化日志
     },
