@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const autoprefixer = require('autoprefixer');
+// const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');
 const baseConfig = require('./webpack.base');
+
+// const smp = new SpeedMeasureWebpackPlugin();
 
 const prodConfig = {
     mode: 'production',
