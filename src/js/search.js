@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Search extends Component {
     constructor() {
@@ -24,6 +25,7 @@ class Search extends Component {
             <div>
                 {Text ? <Text /> : null}
                 search text
+                {moment().format('YYYY-MM-DD HH:mm:ss')}
                 <button onClick={this.loadComponent.bind(this)} type="button">代码分割，异步加载jsonp</button>
             </div>
         );

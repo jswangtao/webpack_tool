@@ -11,11 +11,6 @@ import 'babel-polyfill';
 import { a } from './tree-shaking';
 
 import Search from './search';
-import Search1 from './search copy';
-import Search2 from './search copy 2';
-import Search3 from './search copy 3';
-import Search4 from './search copy 4';
-import Search5 from './search copy 5';
 
 // 注意data会自动被转换为原生的js对象或者数组
 document.write('entry.js is work <br/>');
@@ -27,11 +22,6 @@ console.log('🚀🚀🚀wimi======>>>tree', a);
 ReactDOM.render(
     <>
         <Search />
-        <Search1 />
-        <Search2 />
-        <Search3 />
-        <Search4 />
-        <Search5 />
     </>,
     document.getElementById('root'),
 );
