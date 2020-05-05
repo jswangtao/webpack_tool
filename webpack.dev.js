@@ -3,6 +3,8 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 自动生成html文件的插件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 清除之前打包的文件
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
 
 module.exports = {
     // 入口   此为单页面应用（SPA）,多页面应用（MPA）查 https://www.webpackjs.com/guides/output-management/#%E9%A2%84%E5%85%88%E5%87%86%E5%A4%87
@@ -50,11 +52,13 @@ module.exports = {
                 NODE_ENV: JSON.stringify('development'),
             },
         }),
+        new FriendlyErrorsWebpackPlugin(), // 优化构建日志
     ],
     devServer: {
         contentBase: './dist', // 默认服务于根目录下的index.html(可修改路径), 热加载是给开发人员使用的，它会开启服务器，将本地资源打包，监控到服务器中，给本地打包资源无关
         open: true, // 自动打开浏览器
         port: 4000,
         host: '0.0.0.0',
+        quiet: true, // 优化日志
     },
 };
