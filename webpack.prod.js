@@ -53,8 +53,8 @@ module.exports = {
   plugins: [
     //new HtmlWebpackPlugin(), //以默认的模版生成默认的index.html
     new HtmlWebpackPlugin({
-      filename: 'index.html', //以指定的模版生成指定名字的html
       template: './index.html',
+      filename: 'index.html', //以指定的模版生成指定名字的html
       inject: true,
       minify: {
         html5: true,
