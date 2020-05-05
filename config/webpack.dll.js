@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 清除之前�
 const { library } = require('./dll.config.js');
 
 // dll文件存放的目录
-const dllPath = 'public/vendor';
+const dllPath = '../public/vendor';
 module.exports = {
     // 入口文件
     entry: {

@@ -24,10 +24,10 @@
     "webpack-dev-server": "^3.2.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "dll": "webpack --config webpack.dll.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.js",
+    "dll": "webpack --config config/webpack.dll.js",
     "build:all": "npm run dll && npm run build",
     "eslint": "eslint --fix"
   },

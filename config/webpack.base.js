@@ -5,11 +5,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     // 入口   此为单页面应用（SPA）,多页面应用（MPA）查 https://www.webpackjs.com/guides/output-management/#%E9%A2%84%E5%85%88%E5%87%86%E5%A4%87
-    entry: './src/js/entry.js',
+    entry: path.join(__dirname, '../src/js/entry.js'),
     // 出口
     output: {
         filename: 'bundle.js', // 输出文件名
-        path: path.resolve(__dirname, 'dist'), // 输出文件路径配置
+        path: path.join(__dirname, '../dist'), // 输出文件路径配置
     },
     module: {
         rules: [

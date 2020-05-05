@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // 体积分析
 const baseConfig = require('./webpack.base');
 
-const dllPath = './public/vendor/';
+const dllPath = '../public/vendor/';
 const { library } = require('./dll.config.js');
 // const smp = new SpeedMeasureWebpackPlugin();
 
@@ -43,7 +43,7 @@ const prodConfig = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html', // 以指定的模版生成指定名字的html
-            template: './index.html',
+            template: path.join(__dirname, '../index.html'),
             env: false,
         }),
         new webpack.DefinePlugin({
@@ -54,15 +54,15 @@ const prodConfig = {
         }),
         new CopyWebpackPlugin([
             {
-                from: absolePath('./public/vendor'),
-                to: absolePath('./dist'),
+                from: absolePath('../public/vendor'),
+                to: absolePath('../dist'),
             },
         ]),
         // new BundleAnalyzerPlugin(),
         ...Object.keys(library).map(
             (name) => new webpack.DllReferencePlugin({
                 context: '.',
-                manifest: path.join(dllPath, `${name}-manifest.json`),
+                manifest: path.join(__dirname, dllPath, `${name}-manifest.json`),
             }),
         ),
     ],
