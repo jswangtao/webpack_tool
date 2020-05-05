@@ -55,7 +55,7 @@ const prodConfig = {
         new CopyWebpackPlugin([
             {
                 from: absolePath('./public/vendor'),
-                to: absolePath('./public/dist'),
+                to: absolePath('./dist'),
             },
         ]),
         // new BundleAnalyzerPlugin(),

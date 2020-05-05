@@ -9,7 +9,7 @@ module.exports = {
     // 出口
     output: {
         filename: 'bundle.js', // 输出文件名
-        path: path.resolve(__dirname, 'public/dist'), // 输出文件路径配置
+        path: path.resolve(__dirname, 'dist'), // 输出文件路径配置
     },
     module: {
         rules: [
