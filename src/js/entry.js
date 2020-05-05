@@ -6,6 +6,7 @@ import { cube } from './math';
 import data from '../json/data.json';
 // 直接引入css文件，但是必须借助于loader
 import '../css/test.css';
+import 'babel-polyfill';
 
 import { a } from './tree-shaking';
 

@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const autoprefixer = require('autoprefixer');
-// const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');
+// const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin'); //速度分析
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // 体积分析
 const baseConfig = require('./webpack.base');
 
 // const smp = new SpeedMeasureWebpackPlugin();
@@ -36,6 +37,7 @@ const prodConfig = {
                 NODE_ENV: JSON.stringify('production'),
             },
         }),
+        // new BundleAnalyzerPlugin(),
     ],
     // optimization: {
     //   splitChunks: {
