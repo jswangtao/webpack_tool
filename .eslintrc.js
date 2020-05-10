@@ -17,6 +17,8 @@ module.exports = {
     "max-classes-per-file": ["error", 10],
     "react/prop-types": 0, //防止在React组件定义中丢失props验证
     'import/prefer-default-export': 0,
+    "react/prefer-stateless-function": 0, 
+    "consistent-return":0
   },
   settings: {
     'import/resolver': {

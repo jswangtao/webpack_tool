@@ -19,9 +19,6 @@ export default class AsyncRoute extends React.Component {
       load,
       subRoutes,
       title,
-      handlePathMatched,
-      withoutLogin,
-      openAccess,
       hasBottom,
       ...rest
     } = this.props;
@@ -34,7 +31,6 @@ export default class AsyncRoute extends React.Component {
             load={load}
             subRoutes={subRoutes}
             title={title}
-            handlePathMatched={handlePathMatched}
             hasBottom={hasBottom}
           />
         )}
@@ -58,10 +54,8 @@ class AsyncLoader extends React.Component {
 
   componentDidMount() {
     const {
-      load, title, hasBottom, match,
+      load, title,
     } = this.props;
-    const { handlePathMatched } = this.props;
-    handlePathMatched({ path: match.path, hasBottom });
 
     load()
       .then((Component) => this.setState({

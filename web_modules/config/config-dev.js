@@ -1,4 +1,4 @@
-export default {
+export const config = {
   // 联调环境
   BFF_HOST: 'http://192.168.18.131:8088',
   HTTP_TIME_OUT: 10,
