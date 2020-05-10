@@ -12,7 +12,6 @@ class Container extends React.Component {
 
 
   render() {
-    console.log('🚀🚀🚀wimi======>>>routers', routers);
     const routes = routeWithSubRoutes(routers);
     return (
       <div>
