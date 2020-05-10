@@ -1,7 +1,14 @@
 import 'whatwg-fetch';
-import {} from 'wmkit';
 import { Toast } from 'antd-mobile';
-import { config } from '../config';
+import { config } from '../config/index';
+
+function _insertHost(input) {
+  if (typeof input === 'string') {
+    return config.BFF_HOST + input;
+  }
+  return input;
+}
+
 
 /**
  * 封装业务fetch
@@ -17,10 +24,26 @@ export default async function Fetch(
     isUpload: false,
   },
 ) {
+  const { insertHost } = opts;
+  input = insertHost == null || insertHost ? _insertHost(input) : input;
+
   // 封装请求信息
   const request = {
     method: 'GET',
     mode: 'cors', // 跨域请求
+    headers: opts.isUpload
+      ? {
+        system: 'H5',
+        Authorization: `Bearer ${window.token || ''}`,
+      }
+      : {
+        system: 'H5',
+        'Content-Type': 'application/json',
+        // 'x-client-type': WMkit.isInweixin() ? 'w' : 'm',
+        // 'x-href': encodeURIComponent(window.location.href),
+        // 'x-uid': adminId.slice(1),
+        Authorization: `Bearer ${window.token || ''}`,
+      },
     ...init,
   };
 

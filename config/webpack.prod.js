@@ -51,6 +51,7 @@ const prodConfig = {
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
       },
+      __DEV__: false,
     }),
     new CopyWebpackPlugin([
       {

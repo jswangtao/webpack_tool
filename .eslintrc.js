@@ -19,7 +19,10 @@ module.exports = {
     'import/prefer-default-export': 0,
     "react/prefer-stateless-function": 0, 
     "consistent-return":0,
-    "react/button-has-type":0
+    "react/button-has-type":0,
+    "class-methods-use-this": "off",
+    "no-underscore-dangle":0,
+    "no-undef":0
   },
   settings: {
     'import/resolver': {
@@ -28,4 +31,11 @@ module.exports = {
       },
     },
   },
+
+  parserOptions: {
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
+  }
+  
 }

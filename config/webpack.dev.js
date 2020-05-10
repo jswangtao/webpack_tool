@@ -29,6 +29,7 @@ const devConfig = {
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
       },
+      __DEV__: true,
     }),
     new FriendlyErrorsWebpackPlugin(), // 优化构建日志
   ],
