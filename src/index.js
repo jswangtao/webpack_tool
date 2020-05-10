@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { routeWithSubRoutes } from 'wmkit';
+import { Router, Route } from 'react-router-dom';
+import { routeWithSubRoutes, history } from 'wmkit';
 import routers from './router';
 
 class Container extends React.Component {
@@ -9,6 +9,7 @@ class Container extends React.Component {
     super();
     this.state = {};
   }
+
 
   render() {
     console.log('🚀🚀🚀wimi======>>>routers', routers);
@@ -22,7 +23,7 @@ class Container extends React.Component {
 }
 
 const D2CWechat = () => (
-  <Router>
+  <Router history={history}>
     <Route component={Container} />
   </Router>
 );
