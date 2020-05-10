@@ -1,6 +1,6 @@
 module.exports = {
-    library: {
-        react: ['react', 'react-dom'],
-        others: ['moment'],
-    },
+  library: {
+    react: ['react', 'react-dom'],
+    others: ['moment'],
+  },
 };

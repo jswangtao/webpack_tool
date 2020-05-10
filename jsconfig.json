@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "jsx": "react",
+    "strictNullChecks": false,
+    "sourceMap": false,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "rootDirs": ["src", "web_modules"],
+    "paths": {
+      "wmkit": ["web_modules/wmkit"],
+      "wmkit/*": ["web_modules/wmkit/*"],
+      "config": ["web_modules/config"],
+      "biz": ["web_modules/biz"]
+    }
+  },
+  "exclude": ["node_modules", "build", "dist", "__settings__"]
+}
