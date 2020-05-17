@@ -15,14 +15,14 @@ const routers = [
     path: '/',
     title: document.title || '首页',
     exact: true,
-    asyncComponent: () => import('./main'),
+    asyncComponent: () => import('./pages/main'),
     hasBottom: true,
   },
   {
     path: '/test',
     title: document.title || '测试',
     exact: true,
-    asyncComponent: () => import('./test'),
+    asyncComponent: () => import('./pages/test'),
   },
 ];
 

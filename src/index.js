@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router-dom';
 import { routeWithSubRoutes, history } from 'wmkit';
+import { Provider } from 'react-redux';
+import store from './store';
 import routers from './router';
 
 class Container extends React.Component {
@@ -22,9 +24,11 @@ class Container extends React.Component {
 }
 
 const D2CWechat = () => (
-  <Router history={history}>
-    <Route component={Container} />
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Route component={Container} />
+    </Router>
+  </Provider>
 );
 
 ReactDOM.render(<D2CWechat />, document.getElementById('root'));
