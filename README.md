@@ -1,8 +1,16 @@
+<!--
+ * @Author: wangtao
+ * @Date: 2022-09-22 22:40:46
+ * @LastEditors: 汪滔
+ * @LastEditTime: 2022-09-22 22:45:07
+ * @Description: file content
+-->
+
 # webpack_tool
 
 ---
 
-- 这是基于 webpack4 打包工具的基本配置仓库
+- 这是基于 webpack5 打包工具的基本配置仓库
   <br>
 
 ## 一 文档基本结构
@@ -13,7 +21,7 @@ webpack_tool
     |- bundle.js            打包后js
     |- index.html           根据引入js的HTML
   |- docs                   相关教程文档文件夹
-    |- webpack4快速入门教程.md
+    |- webpack5快速入门教程.md
   |- src                    演示源码文件夹
     |- css
     |- image
@@ -28,12 +36,12 @@ webpack_tool
 
 ```
 
-1. 下载此库到本地后，将webpack.config.js 和package.json 移值到项目中
+1. 下载此库到本地后，将 webpack.config.js 和 package.json 移值到项目中
 
 ```
 npm install
 ```
 
-2. 也可以根据docs文件夹下的文档一步步学习并创建
+2. 也可以根据 docs 文件夹下的文档一步步学习并创建
 
-[webpack4快速入门教程.md](https://github.com/WTxiaomage/webpack_tool/blob/master/docs/webpack.md)<br/>
+[webpack5 快速入门教程.md](./docs/webpack.md)<br/>

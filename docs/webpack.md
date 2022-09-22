@@ -1,4 +1,4 @@
-## webpack4 快速入门教程
+## webpack5 快速入门教程
 
 ### 1、了解 Webpack 相关
 
@@ -6,7 +6,7 @@
    - Webpack 是一个模块打包器(bundler)。
    - 在 Webpack 看来, 前端的所有资源文件(js/json/css/img/less/...)都会作为模块处理
    - 它将根据模块的依赖关系进行静态分析，生成对应的静态资源
-   - webpack4与webpack3的区别之一：webpack4里面的webpack-cli没有内置，要单独下载
+   - webpack4 与 webpack3 的区别之一：webpack4 里面的 webpack-cli 没有内置，要单独下载
 2. 理解 Loader
    - Webpack 本身只能加载 JS/JSON 模块，如果要加载其他类型的文件(模块)，就需要使用对应的 loader 进行转换/加载
    - Loader 本身也是运行在 node.js 环境中的 JavaScript 模块
