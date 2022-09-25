@@ -1,5 +1,5 @@
 // webpack.dev.js
-
+const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 const { resolveApp } = require("./paths");
@@ -18,5 +18,8 @@ module.exports = merge(common, {
 
     // 编译前清除目录
     clean: true,
+  },
+  devServer: {
+    static: { directory: path.join(__dirname, "/") },
   },
 }); // 暂不添加配置
