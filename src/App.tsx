@@ -2,15 +2,24 @@
  * @Author: wangtao
  * @Date: 2022-09-25 14:46:14
  * @LastEditors: 汪滔
- * @LastEditTime: 2022-09-25 17:22:51
+ * @LastEditTime: 2022-09-25 23:10:05
  * @Description: file content
  */
 import React from "react";
-import Hello from "./hello";
+import { HashRouter as Router } from "react-router-dom";
+
+import routes from "./router/routes";
+import asyncRouter from "./router/async-router";
+
+const AppRoutes = () => {
+  let container = asyncRouter(routes);
+  return container;
+};
+
 export default function App() {
   return (
-    <div>
-      <Hello />
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
