@@ -21,5 +21,8 @@ module.exports = merge(common, {
   },
   devServer: {
     static: { directory: path.join(__dirname, "/") },
+    hot: true, // 热更新
+    host: "127.0.0.1",
+    port: "3000",
   },
 }); // 暂不添加配置

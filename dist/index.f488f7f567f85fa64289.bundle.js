@@ -1,1 +1,0 @@
-(()=>{"use strict";console.log("🚀🚀🚀wimi======>>>index",index),console.log("🚀🚀🚀wimi======>>>a",(function(){return"This is func a"}))})();
