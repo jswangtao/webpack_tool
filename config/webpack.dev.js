@@ -1,28 +1,22 @@
-const path = require("path");
-const webpack = require("webpack");
+// webpack.dev.js
+
 const { merge } = require("webpack-merge");
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const common = require("./webpack.common");
+const { resolveApp } = require("./paths");
 
-const smp = new SpeedMeasurePlugin();
-
-const isNeedSpeed = true;
-
-const config = merge(common, {
-  // 模式
+module.exports = merge(common, {
   mode: "development",
   // 开发工具，开启 source map，编译调试
   devtool: "eval-cheap-module-source-map",
-  // 开发模式，自动更新改动
-  devServer: {
-    static: { directory: path.join(__dirname, "/") },
-    hot: true, // 热更新
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin(),
-  ],
-});
+  // 输出
+  output: {
+    // bundle 文件名称
+    filename: "[name].bundle.js",
 
-module.exports = isNeedSpeed ? smp.wrap(config) : config;
+    // bundle 文件路径
+    path: resolveApp("dist"),
+
+    // 编译前清除目录
+    clean: true,
+  },
+}); // 暂不添加配置
