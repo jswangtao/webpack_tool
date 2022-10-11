@@ -1,0 +1,45 @@
+<!--
+ * @Author: wangtao
+ * @Date: 2022-10-10 00:58:45
+ * @LastEditors: 汪滔
+ * @LastEditTime: 2022-10-10 23:46:49
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">container</div>
+    <div id="push_btn">push_btn</div>
+    <div id="replace_btn">replace_btn</div>
+
+    <script type="module">
+      import HistoryRouter from "./BrowserRouter.js";
+      const container = document.getElementById("container");
+      const routeArr = [
+        {
+          path: "/index",
+          content: () => (container.innerHTML = "这是首页"),
+        },
+        {
+          path: "/about",
+          content: () => (container.innerHTML = "这是关于页"),
+        },
+        {
+          path: "/detail",
+          content: () => (container.innerHTML = "这是详情页"),
+        },
+      ];
+      const router = new HistoryRouter(routeArr);
+      document.getElementById("push_btn").onclick = () =>
+        router.push("/detail");
+      document.getElementById("replace_btn").onclick = () =>
+        router.replace("/detail");
+    </script>
+  </body>
+</html>
