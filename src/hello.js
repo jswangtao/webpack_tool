@@ -1,2 +1,4 @@
 // hello.js
-console.log("hello webpack");
+export default function () {
+  console.log("hello webpack");
+}

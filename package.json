@@ -11,6 +11,6 @@
   },
   "scripts": {
     "dev": "npx webpack serve --open --config config/webpack.dev.js",
-    "build": "npx webpack --config config/webpack.prod.js"
+    "build": "npx webpack --config config/webpack.dev.js"
   }
 }

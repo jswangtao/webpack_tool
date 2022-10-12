@@ -1,8 +1,8 @@
-
 export function a() {
-    return 'This is func a';
+  var a = "This is func a";
+  return a;
 }
 
 export function b() {
-    return 'This is func b';
+  return "This is func b";
 }
